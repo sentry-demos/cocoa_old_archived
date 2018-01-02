@@ -15,7 +15,6 @@
 		634B72631F345947007FFB87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634B72611F345947007FFB87 /* LaunchScreen.storyboard */; };
 		634B726E1F345947007FFB87 /* sentry_ios_cocoapodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634B726D1F345947007FFB87 /* sentry_ios_cocoapodsTests.swift */; };
 		634B72791F345947007FFB87 /* sentry_ios_cocoapodsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634B72781F345947007FFB87 /* sentry_ios_cocoapodsUITests.swift */; };
-		97C5BEB01FFBEB180089B363 /* sentry-pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 97C5BEAF1FFBEB180089B363 /* sentry-pattern.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +51,6 @@
 		634B72741F345947007FFB87 /* sentry-ios-cocoapodsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sentry-ios-cocoapodsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		634B72781F345947007FFB87 /* sentry_ios_cocoapodsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sentry_ios_cocoapodsUITests.swift; sourceTree = "<group>"; };
 		634B727A1F345947007FFB87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		97C5BEAF1FFBEB180089B363 /* sentry-pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sentry-pattern.png"; path = "../../ruby_on_rails/app/assets/images/sentry-pattern.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +104,6 @@
 		634B72571F345947007FFB87 /* sentry-ios-cocoapods */ = {
 			isa = PBXGroup;
 			children = (
-				97C5BEAF1FFBEB180089B363 /* sentry-pattern.png */,
 				634B72581F345947007FFB87 /* AppDelegate.swift */,
 				634B725A1F345947007FFB87 /* ViewController.swift */,
 				634B725C1F345947007FFB87 /* Main.storyboard */,
@@ -263,7 +260,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				634B72631F345947007FFB87 /* LaunchScreen.storyboard in Resources */,
-				97C5BEB01FFBEB180089B363 /* sentry-pattern.png in Resources */,
 				634B72601F345947007FFB87 /* Assets.xcassets in Resources */,
 				634B725E1F345947007FFB87 /* Main.storyboard in Resources */,
 			);
