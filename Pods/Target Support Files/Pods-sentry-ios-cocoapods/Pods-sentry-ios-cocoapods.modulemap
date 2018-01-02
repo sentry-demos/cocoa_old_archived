@@ -1,0 +1,6 @@
+framework module Pods_sentry_ios_cocoapods {
+  umbrella header "Pods-sentry-ios-cocoapods-umbrella.h"
+
+  export *
+  module * { export * }
+}
