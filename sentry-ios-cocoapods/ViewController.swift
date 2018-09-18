@@ -9,8 +9,7 @@
 import UIKit
 import Sentry
 
-class ViewController: UIViewController {
-    
+class ViewController: UIViewController {    
     override func viewDidLoad() {
         super.viewDidLoad()
         do {
