@@ -14,7 +14,7 @@
 #import <Sentry/SentryEvent.h>
 #import <Sentry/SentryError.h>
 #import <Sentry/SentryLog.h>
-#import <Sentry/NSData+Compression.h>
+#import <Sentry/NSData+SentryCompression.h>
 
 #else
 #import "SentryDsn.h"
@@ -23,7 +23,7 @@
 #import "SentryEvent.h"
 #import "SentryError.h"
 #import "SentryLog.h"
-#import "NSData+Compression.h"
+#import "NSData+SentryCompression.h"
 
 #endif
 
@@ -83,12 +83,23 @@ NSTimeInterval const SentryRequestTimeout = 15;
 
 + (NSURL *)getStoreUrlFromDsn:(SentryDsn *)dsn {
     NSURL *url = dsn.url;
-    NSString *projectId = url.pathComponents[1];
+    NSString *projectId = url.lastPathComponent;
+    NSMutableArray *paths = [url.pathComponents mutableCopy];
+    // [0] = /
+    // [1] = projectId
+    // If there are more than two, that means someone wants to have an additional path
+    // ref: https://github.com/getsentry/sentry-cocoa/issues/236
+    NSString *path = @"";
+    if ([paths count] > 2) {
+        [paths removeObjectAtIndex:0]; // We remove the leading /
+        [paths removeLastObject]; // We remove projectId since we add it later
+        path = [NSString stringWithFormat:@"/%@", [paths componentsJoinedByString:@"/"]]; // We put together the path
+    }
     NSURLComponents *components = [NSURLComponents new];
     components.scheme = url.scheme;
     components.host = url.host;
     components.port = url.port;
-    components.path = [NSString stringWithFormat:@"/api/%@/store/", projectId];
+    components.path = [NSString stringWithFormat:@"%@/api/%@/store/", path, projectId];
     return components.URL;
 }
 
