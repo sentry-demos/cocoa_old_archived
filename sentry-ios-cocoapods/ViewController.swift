@@ -12,32 +12,31 @@ import Sentry
 class ViewController: UIViewController {    
     override func viewDidLoad() {
         super.viewDidLoad()
-        do {
-            Client.shared = try Client(dsn: "https://4b5132d21b6d4470a6083c7048950eea:a192729380d84a71b97c0b74b435c4ee@sentry.io/265601")
-            try Client.shared?.startCrashHandler()
-            Client.logLevel = .verbose
-            Client.shared?.tags = ["a": "b"]
-            Client.shared?.extra = ["c": "d"]
-            let user = User(userId: "1234")
-            user.email = email.text!
-            Client.shared?.user = user
-        } catch let error {
-            print("\(error)")
-            // Wrong DSN or KSCrash not installed
-        }
-        Client.shared?.enableAutomaticBreadcrumbTracking()
+        
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "sentry-pattern.png")
+        backgroundImage.contentMode = UIViewContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
     }
     
     @IBAction func sendMessage(_ sender: Any) {
         let event = Event(level: .debug)
-        event.message = "Runtime Error"
+        event.message = "Runtime Error [User sent event]"
         Client.shared?.send(event: event) { (error) in
-            // Optional callback after event has been send
+            // Optional callback after event has been sent
         }
     }
     
     @IBAction func causeCrash(_ sender: Any) {
         Client.shared?.crash()
+        //fatalError()
+    }
+    
+    
+    @IBAction func causeRuntimeException(_ sender: Any) /*throws*/ {
+        //Index out of rang exception
+        var listOfNumbers = [1, 2, 3]
+        print(listOfNumbers[4])
     }
     
     @IBOutlet weak var display: UITextView!

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Sentry
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+       do {
+            Client.shared = try Client(dsn: "https://4b5132d21b6d4470a6083c7048950eea@sentry.io/265601")
+            try Client.shared?.startCrashHandler()
+            
+            Client.logLevel = .verbose
+            Client.shared?.tags = ["iphone": "true" , "tag_a": "value_a"]
+            Client.shared?.extra = [ "my_key": 1, "some_other_value": "foo bar"]
+            
+            Client.shared?.releaseName = "release1"
+            Client.shared?.environment = "staging"
+            
+            
+            //Set User
+            let user = User(userId: "1234")
+            //user.email = email.text!
+            user.extra = ["is_admin": true]
+            Client.shared?.user = user
+        } catch let error {
+            print("\(error)")
+            // Wrong DSN or KSCrash not installed
+        }
+        Client.shared?.enableAutomaticBreadcrumbTracking()
+       
         return true
     }
 
