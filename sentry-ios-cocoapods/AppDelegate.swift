@@ -32,9 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             //Set User
             let user = User(userId: "1234")
-            //user.email = email.text!
             user.extra = ["is_admin": true]
             Client.shared?.user = user
+        
         } catch let error {
             print("\(error)")
             // Wrong DSN or KSCrash not installed

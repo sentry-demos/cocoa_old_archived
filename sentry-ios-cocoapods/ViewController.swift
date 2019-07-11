@@ -29,7 +29,6 @@ class ViewController: UIViewController {
     
     @IBAction func causeCrash(_ sender: Any) {
         Client.shared?.crash()
-        //fatalError()
     }
     
     

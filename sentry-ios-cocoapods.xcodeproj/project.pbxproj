@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		326552E27C5D62BB08DF2799 /* Pods_sentry_ios_cocoapods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207E594D9676153EF8FAA84A /* Pods_sentry_ios_cocoapods.framework */; };
+		500B9B5D22D2BD6600A25B24 /* CocoaPodsSwift.png in Resources */ = {isa = PBXBuildFile; fileRef = 500B9B5C22D2BD6600A25B24 /* CocoaPodsSwift.png */; };
 		50123D5622C5895500619000 /* sentry-glyph-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 50123D5522C5895400619000 /* sentry-glyph-black.png */; };
 		634B72591F345947007FFB87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634B72581F345947007FFB87 /* AppDelegate.swift */; };
 		634B725B1F345947007FFB87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634B725A1F345947007FFB87 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		1C9CE84111E4FFA3B37D268B /* Pods-sentry-ios-cocoapods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sentry-ios-cocoapods.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sentry-ios-cocoapods/Pods-sentry-ios-cocoapods.debug.xcconfig"; sourceTree = "<group>"; };
 		207E594D9676153EF8FAA84A /* Pods_sentry_ios_cocoapods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sentry_ios_cocoapods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		500B9B5C22D2BD6600A25B24 /* CocoaPodsSwift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CocoaPodsSwift.png; sourceTree = "<group>"; };
 		50123D5522C5895400619000 /* sentry-glyph-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sentry-glyph-black.png"; path = "../../../../Desktop/sentry-glyph-black.png"; sourceTree = "<group>"; };
 		56C57143F5B59B463B28038C /* Pods-sentry-ios-cocoapods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sentry-ios-cocoapods.release.xcconfig"; path = "Pods/Target Support Files/Pods-sentry-ios-cocoapods/Pods-sentry-ios-cocoapods.release.xcconfig"; sourceTree = "<group>"; };
 		634B72551F345947007FFB87 /* sentry-ios-cocoapods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sentry-ios-cocoapods.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +110,7 @@
 		634B72571F345947007FFB87 /* sentry-ios-cocoapods */ = {
 			isa = PBXGroup;
 			children = (
+				500B9B5C22D2BD6600A25B24 /* CocoaPodsSwift.png */,
 				50123D5522C5895400619000 /* sentry-glyph-black.png */,
 				97C5BEB11FFBEC910089B363 /* sentry-pattern.png */,
 				634B72581F345947007FFB87 /* AppDelegate.swift */,
@@ -241,7 +244,7 @@
 				};
 			};
 			buildConfigurationList = 634B72501F345947007FFB87 /* Build configuration list for PBXProject "sentry-ios-cocoapods" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				634B72631F345947007FFB87 /* LaunchScreen.storyboard in Resources */,
+				500B9B5D22D2BD6600A25B24 /* CocoaPodsSwift.png in Resources */,
 				97C5BEB21FFBEC910089B363 /* sentry-pattern.png in Resources */,
 				634B72601F345947007FFB87 /* Assets.xcassets in Resources */,
 				50123D5622C5895500619000 /* sentry-glyph-black.png in Resources */,
@@ -492,7 +496,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -506,7 +511,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "sentry-ios-cocoapods/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.sentry.sentry-ios-cocoapods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -521,7 +529,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "sentry-ios-cocoapods/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.sentry.sentry-ios-cocoapods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -535,7 +546,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "sentry-ios-cocoapodsTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.sentry.sentry-ios-cocoapodsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -549,7 +564,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "sentry-ios-cocoapodsTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.sentry.sentry-ios-cocoapodsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -562,7 +581,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "sentry-ios-cocoapodsUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.sentry.sentry-ios-cocoapodsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -575,7 +598,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "sentry-ios-cocoapodsUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.sentry.sentry-ios-cocoapodsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
