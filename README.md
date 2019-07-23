@@ -1,5 +1,9 @@
 # Cocoa/iOS Demo
 
+## Open Project
+
+Launch `sentry-ios-cocoapods.xcworkspace` which will pull up workspace+project in XCode.
+
 ## Setup
 
 1. Set `SENTRY_AUTH_TOKEN` as an environment variable or referenced in 'Run Script' build phase.
@@ -18,8 +22,8 @@
 - From XCode, click on the Stop button
 - From Simulator, click on File > Close Window
 - From Simulator, select Hardware > Device > IOS XX.X > IPhone 8
-- In the simulator instance window, launch the app, click on Native Crash / Runtime Exception 
-- The app will freeze for a few seconds and eventually crash 
+- In the simulator instance window, launch the app, click on Native Crash / Runtime Exception
+- The app will freeze for a few seconds and eventually crash
 - Once you click on the app to relaunch it the event is sent to Sentry
 
 ![Native Crash / Runtime Error](cocoa-native-crash.gif)

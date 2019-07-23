@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2110A6AA22E77CE20044AFCC /* sentry-glyph-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 50123D5522C5895400619000 /* sentry-glyph-black.png */; };
 		326552E27C5D62BB08DF2799 /* Pods_sentry_ios_cocoapods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207E594D9676153EF8FAA84A /* Pods_sentry_ios_cocoapods.framework */; };
 		500B9B5D22D2BD6600A25B24 /* CocoaPodsSwift.png in Resources */ = {isa = PBXBuildFile; fileRef = 500B9B5C22D2BD6600A25B24 /* CocoaPodsSwift.png */; };
-		50123D5622C5895500619000 /* sentry-glyph-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 50123D5522C5895400619000 /* sentry-glyph-black.png */; };
 		634B72591F345947007FFB87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634B72581F345947007FFB87 /* AppDelegate.swift */; };
 		634B725B1F345947007FFB87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634B725A1F345947007FFB87 /* ViewController.swift */; };
 		634B725E1F345947007FFB87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634B725C1F345947007FFB87 /* Main.storyboard */; };
@@ -269,11 +269,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2110A6AA22E77CE20044AFCC /* sentry-glyph-black.png in Resources */,
 				634B72631F345947007FFB87 /* LaunchScreen.storyboard in Resources */,
 				500B9B5D22D2BD6600A25B24 /* CocoaPodsSwift.png in Resources */,
 				97C5BEB21FFBEC910089B363 /* sentry-pattern.png in Resources */,
 				634B72601F345947007FFB87 /* Assets.xcassets in Resources */,
-				50123D5622C5895500619000 /* sentry-glyph-black.png in Resources */,
 				634B725E1F345947007FFB87 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
